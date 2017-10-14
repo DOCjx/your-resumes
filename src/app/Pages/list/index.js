@@ -8,4 +8,4 @@ const {connect} = app;
 const dataTpl = {
     target: 'section',//jq中的选择器，组件添加的位置
 };
-export default () => connect({tpl, dataTpl});//传入页面模板，数据模板和数据服务
+export default () => connect({tpl, dataTpl});//传入页面模板，数据模板和数据服务。加载执行action和启动子组件。

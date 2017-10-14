@@ -8,10 +8,15 @@ const {connect} = app;
 const brandImg = require('../../Public/imgs/picture.jpg');
 const dataTpl = {
     target: 'header',//jq中的选择器，组件添加的位置
-    urls: {
-        brandImg
+    dataRow: {
+        urls: {
+            brandImg
+        }
     }
+
 };
-export default () => connect({tpl, dataTpl, service}, () => {
-    console.log(dataTpl.target + ' action after rended');
-});//传入页面模板，数据模板和数据服务。定义after rended
+export default () => connect({tpl, dataTpl, service}, (data) => {
+    //加载执行action和启动子组件。
+    console.log('action after '+ dataTpl.target + ' rended');
+    console.log('dataLast: ', data);
+});//传入页面模板，数据模板和数据服务。

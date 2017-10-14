@@ -17,8 +17,9 @@ export const render = () => {
                     target: 'title'
                 }
             },
-            cb() {//渲染后的操作
+            cb(data) {//渲染后的操作
                 console.log(dataTpls[0].item.dataTpl.target + ' action after render');
+                console.log('dataLast: ', data);
             }
         },
         {
@@ -34,10 +35,6 @@ export const render = () => {
         const {item, cb} = v;
         connect(item, cb);
     }
-    // connect();
+
     nav();//启动组件
-};
-export default {
-    common,
-    render
 };

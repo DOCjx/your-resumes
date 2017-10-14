@@ -16,7 +16,7 @@
     "js、jq、webpack"
   ],
   "author": "稻壳er",
-  "license": "MIT",
+  "license": "ISC",
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",

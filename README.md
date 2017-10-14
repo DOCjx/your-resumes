@@ -4,13 +4,15 @@
 ## 特性
 
 -   模块化开发，各个组件之间解耦，方便团队合作
--   使用时数据和页面分离，分别在`*.tpl`和`service.js`中
--   组件未启用时不进行渲染操作提高渲染的性能
+-   使用时数据和页面模板分离，分别在`service.js`和`index.tpl`中。页面模板和js效果分离，分别在`index.tpl`和`action.js`
+-   实现类似react的单向数据流，数据模板改变进行页面局部重新渲染
 -   组件数据懒加载，遵循：无数据渲染-获取数据-有数据渲染
--   使用[handlebarsjs](http://handlebarsjs.com/)作为模板引擎，提高开发效率。
+-   组件未启用时不进行渲染操作，提高渲染的性能
+-   函数式编程提高代码阅读性和维护性
+-   使用[handlebarsjs](http://handlebarsjs.com/)作为模板引擎，提高开发效率
+-   使用jq和bootstrap提高开发效率
 -   开发环境使用webpack自带的热更新和[nodemon](https://github.com/remy/nodemon#nodemon)检测webpack配置文件修改实现浏览器实时刷新
 -   生产环境将所有样式文件合并到一个文件，第三方js库合并到一个文件，同时用插件对js带进行压缩
--   使用jq和bootstrap提高开发效率
 
 
 ## 目录结构
