@@ -12,6 +12,5 @@ const dataTpl = {
 };
 export default () => connect({tpl, dataTpl}, (data) => {
     //加载执行action和启动子组件
-    console.log('action after '+ dataTpl.target + ' rended');
     timeNow();//启动子组件
 });//传入页面模板，数据模板和数据服务
