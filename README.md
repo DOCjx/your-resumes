@@ -9,7 +9,7 @@
 -   组件数据懒加载，遵循：无数据渲染-获取数据-有数据渲染
 -   组件未启用时不进行渲染操作，提高渲染的性能
 -   函数式编程提高代码阅读性和维护性
--   使用[handlebarsjs](http://handlebarsjs.com/)作为模板引擎，提高开发效率
+-   使用[handlebarsjs](http://handlebarsjs.com/)作为前端模板，提高开发效率
 -   使用jq和bootstrap提高开发效率
 -   开发环境使用webpack自带的热更新和[nodemon](https://github.com/remy/nodemon#nodemon)检测webpack配置文件修改实现浏览器实时刷新
 -   生产环境将所有样式文件合并到一个文件，第三方js库合并到一个文件，同时用插件对js带进行压缩
