@@ -9,7 +9,8 @@ module.exports = {
             './src/app/index.js'
         ],
         vendors: [
-            './src/vendor/bootstrap-3.3.6/js/bootstrap.min.js'
+            './src/vendor/bootstrap-3.3.6/js/bootstrap.min.js',
+            './src/vendor/jquery.hash/jquery.hash.js'
         ]
     },
     output: {
