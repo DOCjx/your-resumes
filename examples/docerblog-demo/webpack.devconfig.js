@@ -20,6 +20,7 @@ module.exports = {
     resolve: {
         alias: {
             app: path.resolve(__dirname, './src/core/'),
+            utils: path.resolve(__dirname, './src/core/utils.js'),
         }
     },
     module: {
@@ -103,5 +104,6 @@ module.exports = {
             'window.$': 'jquery',
             'window.jQuery': 'jquery'
         }),
+        new webpack.NoEmitOnErrorsPlugin(),
     ],
 };
