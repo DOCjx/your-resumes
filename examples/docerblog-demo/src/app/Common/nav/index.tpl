@@ -1,4 +1,4 @@
-<nav clsss="nav" id="go-top">
+<nav clsss="nav">
     <div class="logo">
         <a href="#?m=index">小窝</a>
     </div>
@@ -18,19 +18,24 @@
     </ul>}}
 
     <ul class="top-nav">
+        <li class="nav-item">
+            <a href="#?m=index">首页</a>
+        </li>
         {{#each nav}}
-            <li class="nav-item">
-                <a href="#?m=list&id={{id}}">{{name}}</a>
-                {{#if sub}}
-                    <div class="submenu">
-                        <ul>
-                            {{#each sub}}
-                            <li><a href="#?m=list&id={{id}}&t={{type}}">{{name}}</a></li>
-                            {{/each}}
-                        </ul>
-                    </div>
-                {{/if}}
-            </li>
+            {{#if type}}
+                <li class="nav-item">
+                    <a href="#?m=list&id={{id}}">{{name}}</a>
+                    {{#if sub}}
+                        <div class="submenu">
+                            <ul>
+                                {{#each sub}}
+                                <li><a href="#?m=list&id={{id}}&t={{type}}">{{name}}</a></li>
+                                {{/each}}
+                            </ul>
+                        </div>
+                    {{/if}}
+                </li>
+            {{/if}}
         {{/each}}
 
         {{!<volist name="category1" id="cat">

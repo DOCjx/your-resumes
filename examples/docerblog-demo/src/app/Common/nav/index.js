@@ -8,7 +8,6 @@ const dataTpl = {
     target: '#nav',//jq中的选择器，组件添加的位置
     dataRow: {
     }
-
 };
 export default () => connect({tpl, dataTpl, service}, (data) => {
     // console.log(data);

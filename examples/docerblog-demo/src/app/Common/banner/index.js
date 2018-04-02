@@ -11,4 +11,7 @@ const dataTpl = {
     }
 
 };
-export default () => connect({tpl, dataTpl});//传入页面模板，数据模板和数据服务。
+export default (isOpen=true) => {
+    const renderTpl = isOpen ? tpl : '';
+    connect({tpl: renderTpl, dataTpl});//传入页面模板，数据模板和数据服务。
+};

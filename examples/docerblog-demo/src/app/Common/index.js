@@ -39,6 +39,5 @@ export const render = () => {
         connect(item, cb);
     }
     nav();//启动组件
-    banner();
     footer();
 };

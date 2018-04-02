@@ -1,4 +1,8 @@
-export default ({tpl, dataTpl, service}, cb) => {
+export default ({tpl, dataTpl, service}, cbBef, cbAft) => {
+    //只有一个cb的时候默认传入的是cbAft
+    const cb = !cbAft && cbBef ? cbBef : cbAft;
+    //执行前置方法
+    cb == cbAft && cbBef && (typeof cbBef == 'function') && cbBef();
     //找到组件需要到哪去和原始静态数据
     let {target, dataRow} = dataTpl;
     //组件初始化

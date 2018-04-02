@@ -4,7 +4,7 @@ export const service = (tpl, cb) => {
     }).then((data) =>{
         tpl(data);
     }, (err) =>{
-        console.log(err);
+        console.log(err.statusText);
     });
 };
 export const pubDt = {

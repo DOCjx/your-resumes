@@ -1,4 +1,4 @@
-<div id="share" class="content"><!--Start  -->
+<div class="content"><!--Start  -->
     <section class="green-section">
         <div class="wrapper">
             <div>

@@ -1,13 +1,15 @@
 import {common, render} from './Common/';
 import pages from './Pages/';
+import {I} from 'utils';
 const {config} = common;
+
+const m = I('m');
 //页面初始化
 render();
 //路由跳转
-let module = pages.hasOwnProperty($.hash().get('m')) ? $.hash().get('m') : config.M;
+let module = pages.hasOwnProperty(m) ? m : config.M;;
 pages[module]();
 $.hash().listen((e) => {
-    // console.log(e.m);
     if(!pages.hasOwnProperty(e.m)) return;
     pages[e.m]();
 });

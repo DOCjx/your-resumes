@@ -6,14 +6,21 @@ export default ({tpl, dataTpl, service}) => {
     const setHeight = () => {
         const availHeight = window.innerHeight;
         $('.content').css('marginTop', availHeight);
-        $('#banner').css('height', availHeight - 50);
+        $('#banner .banner-content').css('height', availHeight);
     };
     $('.share').click((e) => {
         flag == 1 && connect({tpl, dataTpl, service}, (data) => {
             setHeight();
             window.scrollTo(0, window.innerHeight);
         });
+        if(flag != 1){
+            setHeight();
+            window.scrollTo(0, window.innerHeight);
+        }
         flag++;
+    });
+    $('#go-top').click((e) => {
+        window.scrollTo(0, 0);
     });
     $(document).scroll(() => {
         const winScroll = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;

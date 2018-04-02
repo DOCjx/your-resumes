@@ -19,6 +19,7 @@ module.exports = {
     resolve: {
         alias: {
             app: path.resolve(__dirname, './src/core/'),
+            utils: path.resolve(__dirname, './src/core/utils.js'),
         }
     },
     module: {

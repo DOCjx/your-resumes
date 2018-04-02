@@ -49,9 +49,12 @@ Class Detail extends Rest {
     }
     public function read($id)
     {
-        // dump(Request::instance());
-        return json(['data'=> json_encode(Request::instance()->param())], 200);
-        // 输出id为1的Info的json数据
+        $data = db('detail')->where(array('status'=>array('eq', 1), 'id'=>array('eq', $id)))->find();
+        // var_dump($data);
+        $data['update_time'] = date('y-m-d', $data['update_time']);
+        $json['status'] = 'ok';
+        $json['data'] = $data;
+        return json($json);
     }
     public function update($id)
     {
